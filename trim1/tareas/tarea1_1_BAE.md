@@ -34,49 +34,49 @@
 
 5. **Diferencias entre un sistema convencional de archivos y un Sistema Gestor de Base de Datos.**
 
-  El *SGBD* tiene bastantes ventajas respercto a un sistema convencional de archivos, ellas son:
+El *SGBD* tiene bastantes ventajas respercto a un sistema convencional de archivos, ellas son:
 
-    - Proporcionan al usuario una visión abstracta de los datos, ocultando parte de la complejidad relacionada con cómo se almacenan y mantienen los datos.
+  - Proporcionan al usuario una visión abstracta de los datos, ocultando parte de la complejidad relacionada con cómo se almacenan y mantienen los datos.
 
-    - Ofrecen independencia física, es decir, la visión que tiene de la información el usuario, y la manipulación de los datos almacenados en la base de datos, es independiente de cómo estén almacenados físicamente.
+  - Ofrecen independencia física, es decir, la visión que tiene de la información el usuario, y la manipulación de los datos almacenados en la base de datos, es independiente de cómo estén almacenados físicamente.
 
-    - Disminuyen la redundancia y la inconsistencia de datos.
+  - Disminuyen la redundancia y la inconsistencia de datos.
 
-    - Aseguran la integridad de los datos.
+  - Aseguran la integridad de los datos.
 
-    - Facilitan el acceso a los datos, aportando rapidez y evitando la pérdida de datos.
+  - Facilitan el acceso a los datos, aportando rapidez y evitando la pérdida de datos.
 
-    - Aumentan la seguridad y privacidad de los datos.
+  - Aumentan la seguridad y privacidad de los datos.
 
-    - Mejoran la eficiencia.
+  - Mejoran la eficiencia.
 
-    - Permiten compartir datos y accesos concurrentes.
+  - Permiten compartir datos y accesos concurrentes.
 
-    - Facilitan el intercambio de datos entre distintos sistemas.
+  - Facilitan el intercambio de datos entre distintos sistemas.
 
-    - Incorporan mecanismos de copias de seguridad y recuperación para restablecer la información en caso de fallos en el sistema.
+  - Incorporan mecanismos de copias de seguridad y recuperación para restablecer la información en caso de fallos en el sistema.
 
 6. **Componentes de un Sistema Gestor de Base de Datos.**
 
-  - **Lenguaje de la base de datos:** Gracias a él podemos especificar los datos que componen la base de datos, su estructura, relaciones, reglas de integridad, control de acceso, características físicas y vistas externas de los usuarios.
+- **Lenguaje de la base de datos:** Gracias a él podemos especificar los datos que componen la base de datos, su estructura, relaciones, reglas de integridad, control de acceso, características físicas y vistas externas de los usuarios.
 
-  - **Diccionario de la base de datos:** Es el lugar donde se ubica la información sobre la totalidad de los datos que forman la base de datos.
+- **Diccionario de la base de datos:** Es el lugar donde se ubica la información sobre la totalidad de los datos que forman la base de datos.
 
-  - **Gestor de la base de datos:** Es la parte del software encargada de asegurar el correcto, seguro, íntegro y eficiente acceso y almacenamiento de datos.
+- **Gestor de la base de datos:** Es la parte del software encargada de asegurar el correcto, seguro, íntegro y eficiente acceso y almacenamiento de datos.
 
-  - **Usuarios de la base de datos:** Son los distintos perfiles de usuario que tienen acceso a  la base de datos, cada uno de ellos  goza de permisos diferentes.
+- **Usuarios de la base de datos:** Son los distintos perfiles de usuario que tienen acceso a  la base de datos, cada uno de ellos  goza de permisos diferentes.
 
-  - **Herramientas de la base de datos:** Conjunto de aplicaciones que permiten a los administradores la gestión de la base de datos, de los usuarios y permisos, generadores de formularios, informes, interfaces gráficas, generadores de aplicaciones, etc.
+- **Herramientas de la base de datos:** Conjunto de aplicaciones que permiten a los administradores la gestión de la base de datos, de los usuarios y permisos, generadores de formularios, informes, interfaces gráficas, generadores de aplicaciones, etc.
 
 7. **Tipos de usuarios de las bases de datos, funciones y características de cada uno de ellos.**
 
-  **Administradores:** Se encargan del diseño físico de la misma, implementación y mantenimiento de la base de datos.
+**Administradores:** Se encargan del diseño físico de la misma, implementación y mantenimiento de la base de datos.
 
-  **Diseñadores:** Se encarga de identificar los datos, las relaciones entre los datos y las restricciones sobre los datos y sus relaciones.
+**Diseñadores:** Se encarga de identificar los datos, las relaciones entre los datos y las restricciones sobre los datos y sus relaciones.
 
-  **Programadores:** Son los que programan las aplicaciones que interactúan con las bases de datos, con su contenido y con el entorno que las rodea. Estas aplicaciones servirán para que los usuarios finales puedan consultar datos, insertarlos, actualizarlos y eliminarlos.
+**Programadores:** Son los que programan las aplicaciones que interactúan con las bases de datos, con su contenido y con el entorno que las rodea. Estas aplicaciones servirán para que los usuarios finales puedan consultar datos, insertarlos, actualizarlos y eliminarlos.
 
-  **Usuarios finales:** Son los clientes de la base de datos, hacen uso de ella sin conocer en absoluto su funcionamiento y organización interna.
+**Usuarios finales:** Son los clientes de la base de datos, hacen uso de ella sin conocer en absoluto su funcionamiento y organización interna.
 
 8. **Organización de una base de datos.**
 
@@ -194,8 +194,8 @@ Los más conocidos son estos *cuatro*:
 
 10. **Tipos de archivos según su función en el tiempo**
 
-  Se pueden dividir en dos grupos:
+Se pueden dividir en dos grupos:
 
-    - **Permanentes:** Estos contienen los datos necesarios para el funcionamiento de la aplicación y tienen un *periodo de permanencia en el sistema amplio*.
+  - **Permanentes:** Estos contienen los datos necesarios para el funcionamiento de la aplicación y tienen un *periodo de permanencia en el sistema amplio*.
 
-    - **Temporales:** Almacenan información útil para una parte de la aplicación y son generados a partir de los ficheros permanentes. Tienen un *corto periodo de existencia*.
+  - **Temporales:** Almacenan información útil para una parte de la aplicación y son generados a partir de los ficheros permanentes. Tienen un *corto periodo de existencia*.
