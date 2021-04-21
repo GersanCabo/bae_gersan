@@ -145,7 +145,7 @@ SELECT cliente.nombre, programa.nombre FROM cliente, registra, programa WHERE re
 
 --37. Genera un listado en el que aparezca cada cliente junto al programa que ha registrado, el medio con el que lo ha hecho y el comercio en el que lo ha adquirido.
 
-SELECT cliente.dni, cliente.nombre, programa.nombre, programa.version, registra.medio, comercio.cif, comercio.nombre FROM cliente, programa, registra, comercio WHERE registra.dni=cliente.dni AND 
+SELECT cliente.dni, cliente.nombre, programa.nombre, programa.version, registra.medio, comercio.cif, comercio.nombre FROM cliente, programa, registra, comercio WHERE registra.dni = cliente.dni AND regitra.codigo = programa.codigo AND registra.cif = comercio.cif;
 
 --38. Genera un listado con las ciudades en las que se pueden obtener los productos de Oracle. 
 
