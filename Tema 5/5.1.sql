@@ -43,4 +43,15 @@ DROP TABLE IF EXISTS montofacturas;
 6-Realice una consulta de la tabla facturas, agrupando por numero, en la cual aparezca el 
 número de factura y el monto total de todos sus items.
 */
-SELECT numero, cantidad * precioporunidad AS total FROM facturas GROUP BY numero;
+SELECT numero, SUM(cantidad * precioporunidad) AS total FROM facturas GROUP BY numero;
+
+-- 7-Cree la tabla montofacturas a partir de la consulta anterior.
+CREATE TABLE montofacturas 
+    SELECT numero, SUM(cantidad * precioporunidad) AS total FROM facturas GROUP BY numero;
+ALTER TABLE montofacturas ADD PRIMARY KEY(numero);
+
+-- 8-Muestre todos los registros de la tabla montofacturas.
+SELECT * FROM montofacturas;
+
+-- 9-Visualice la estructura de la nueva tabla creada.
+DESCRIBE montofacturas;
