@@ -11,7 +11,8 @@ CREATE TABLE facturas (
     numeroitem SMALLINT UNSIGNED NOT NULL,
     descripcion VARCHAR(30),
     precioporunidad DECIMAL(5,2) UNSIGNED,
-    cantidad TINYINT UNSIGNED
+    cantidad TINYINT UNSIGNED,
+    PRIMARY KEY (numero, numeroitem)
 );
 -- 3-Ingrese algunos registros:
 INSERT INTO facturas VALUES (0000000100,1,"escuadra 20cm.",2.50,20);
@@ -32,5 +33,30 @@ de factura y el monto total en dinero de todos los items de cada
 factura (precioporunidad x cantidad). Cree la tabla con la siguiente 
 estructura:
 */
+CREATE TABLE montofacturas (
+    numero INT(10) UNSIGNED ZEROFILL NOT NULL,
+    total DECIMAL(9,2) UNSIGNED,
+    PRIMARY KEY (numero)
+);
 
+INSERT INTO montofacturas (numero,total)
+    SELECT numero, SUM(precioporunidad*cantidad) FROM facturas GROUP BY numero;
 
+/*
+6-Realice una consulta de la tabla facturas, agrupando por numero, en la 
+cual aparezca el número de factura y el monto total de todos sus items.
+*/
+SELECT numero, SUM(cantidad) AS monto_total FROM facturas GROUP BY numero;
+
+/*
+7-Ingrese el resultado de la consulta anterior en la tabla montofacturas:
+*/
+DELETE FROM montofacturas;
+
+INSERT INTO montofacturas (numero,total)
+    SELECT numero, SUM(cantidad) AS monto_total FROM facturas GROUP BY numero;
+
+/*
+8-Muestre todos los registros de la tabla montofacturas.
+*/
+SELECT * FROM montofacturas;

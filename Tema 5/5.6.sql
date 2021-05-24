@@ -49,13 +49,20 @@ INSERT INTO provincias VALUES (6,"Buenos Aires");
 INSERT INTO provincias VALUES (7,"Neuquen");
 
 /*
-4- Se quiere cambiar el código correspondiente a la provincia Cordoba por 10 y modificar todos los 
-    códigos de provincia de los clientes de Cordoba en una sola sentencia:
+4- La empresa quiere eliminar la tabla provincias y almacenar el nombre de la provincia de la cual son oriundos sus clientes en la misma tabla clientes.
 */
-UPDATE provincias AS p JOIN clientes AS c ON p.codigo = c.codigoprovincia SET p.codigo=10, c.codigoprovincia=10 WHERE p.codigo=1;
+/*
+5- Altere la tabla clientes para que se almacene en ella el nombre de la provincia:
+*/
+ALTER TABLE clientes ADD provincia VARCHAR(20);
 
 /*
-5- Verifique el cambio en ambas tablas:
+6- Actualice el campo provincia de todos los registros de clientes, con el valor del campo nombre de la tabla provincias mediante un join:
 */
-SELECT * FROM clientes WHERE codigoprovincia = 10;
-SELECT * FROM provincias WHERE codigo = 10;
+UPDATE clientes JOIN provincias ON clientes.codigoprovincia = provincias.codigo SET clientes.provincia = provincias.nombre;
+
+/*
+7- Elimine el campo innecesario en clientes y la tabla provincias.
+*/
+ALTER TABLE clientes DROP codigoprovincia;
+DROP TABLE provincias;
