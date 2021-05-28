@@ -72,4 +72,9 @@ SELECT * FROM alumnos;
 /*
 10. Modificamos la nota de un alumno aprobado mediante la vista.
 */
-UPDATE /*FALTA EL 10 Y EL 11*/
+UPDATE mejores_notas SET nota = 7.5 WHERE documento = 30666666;
+
+/*
+11. Mostramos la tabla alumnos.
+*/
+SELECT * FROM alumnos;
